@@ -47,27 +47,32 @@ export default function Home() {
         <div className={changeClassName} style={{backgroundColor: newNavFootColor}}>
           <NavBar/>    
         </div> 
-        <div style={{backgroundColor: newBodyColor}}>
+        <div style={{backgroundColor: newBodyColor}} className={changeClassName}>
         <div>
           <input type="radio" name="fav_language" value="light"
-            onClick={e=>setChangeClassName('lightmode')}
+            onClick={e=>setChangeClassName('lightmode, test')}
           />
           <label for="html">light</label><br></br>
-          <input type="radio" name="fav_language" value="dark"/>
+          <input type="radio" name="fav_language" value="dark"
+             onClick={e=>setChangeClassName('darkmode')}
+          />
           <label for="html">dark</label><br></br>
           <input type="radio" name="fav_language" value="custom"
             onClick={e=>setChangeClassName('none')}
           />
           <label for="html">custom</label><br></br>
+          
         </div>
         	<input type="color" onChange={e=>setNewNavFootColor(e.target.value)}/> 
         	<input type="color" onChange={e=>setNewBodyColor(e.target.value)}/>
         	<input type="color" onChange={e=>setNewTextColor(e.target.value)}/>
         </div>
-        <div style={{backgroundColor: newBodyColor, color:newTextColor}}>
+
+        <div style={{backgroundColor: newBodyColor, color:newTextColor}} className={changeClassName}>
         	<Content/>
         </div> 
-        <div style={{backgroundColor: newNavFootColor}} className={changeClassName} >
+        
+        <div style={{backgroundColor: newNavFootColor}} className={changeClassName}>
           	<Footer/>
         </div>
     </div>
