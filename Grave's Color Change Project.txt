@@ -1,0 +1,44 @@
+﻿As a user, I want…
+
+
+A simple but aesthetically pleasing design.
+
+
+The page to be mobile responsive
+
+
+The page to be composed of three different colors (primary, secondary, and tertiary) or values of colors (mid tone, light, dark)
+
+
+To be able to use the color picker to either pick one color and automatically adjust the tones accordingly
+
+
+A copy of the hex codes and rgba codes of the color(s) I’ve chosen to be displayed and available.
+
+
+To be able to select all three colors for primary, secondary, and tertiary values myself.  
+
+
+To be able to save my color schemes and reselect them to compare (save to local storage and delete on unmount of app).
+
+
+To be able to upload an SVG image or SVG link and be able to set the color of it to see if it matches my theme
+
+
+
+
+
+
+As a developer, I want…
+
+
+Only one local storage item to be used
+
+
+File structure to make sense and be easy to follow
+
+
+In line notes to be able to follow any functions that don’t make sense at first glance
+
+
+Components to not exceed 200 linesS
