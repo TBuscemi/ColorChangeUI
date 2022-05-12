@@ -18,7 +18,6 @@ export const LightAndDark = () => {
   return (
     <div>
         <input type="color" onChange={e=>setnewColor(e.target.value)}/> 
-
         <button style={{backgroundColor: newColor}} >
         	<h1>butt1</h1>
         </button>
