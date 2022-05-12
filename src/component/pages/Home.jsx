@@ -10,27 +10,33 @@ export default function Home() {
   
   const mountedRef=useRef()
 
-  const[navFootColor, setNavFootColor]=useState()
+  const[color, setColor]=useState()
 
   const[newNavFootColor, setNewNavFootColor]=useState()
 
-  const[bodyColor, setBodyColor]=useState()
-
   const[newBodyColor, setNewBodyColor]=useState()
+  
+  const[newTextColor, setNewTextColor]=useState()
 
   
   useEffect(()=>{
       mountedRef.current=true
-      if(mountedRef.current===true) setNewBodyColor(bodyColor)
+      if(mountedRef.current===true) setNewBodyColor(color)
       return ()=> mountedRef.current=false
-  },[bodyColor])
+  },[color])
   
 
   useEffect(()=>{
       mountedRef.current=true
-      if(mountedRef.current===true) setNewNavFootColor(navFootColor)
+      if(mountedRef.current===true) setNewNavFootColor(color)
       return ()=> mountedRef.current=false
-  },[navFootColor])
+  },[color])
+  
+  useEffect(()=>{
+      mountedRef.current=true
+      if(mountedRef.current===true) setNewTextColor(color)
+      return ()=> mountedRef.current=false
+  },[color])
 
 
   
@@ -42,11 +48,12 @@ export default function Home() {
         <div style={{backgroundColor: newBodyColor}} >
         	<input type="color" onChange={e=>setNewNavFootColor(e.target.value)}/> 
         	<input type="color" onChange={e=>setNewBodyColor(e.target.value)}/>
+        	<input type="color" onChange={e=>setNewTextColor(e.target.value)}/>
         </div>
-        <div style={{backgroundColor: newBodyColor, color:newNavFootColor}}>
+        <div style={{backgroundColor: newBodyColor, color:newTextColor}}>
         	<Content/>
         </div> 
-        <div style={{backgroundColor: newNavFootColor}}>
+        <div style={{backgroundColor: newNavFootColor, a:newTextColor}}>
           	<Footer/>
         </div>
     </div>
