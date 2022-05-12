@@ -1,0 +1,65 @@
+
+.nav-wrapper{
+  background-color: rgb(66, 66, 66);
+  width: 100%;
+  min-width: 100%;
+  height: 7rem;
+  display: flex;
+}
+
+.nav-cont{
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: flex-end;
+  // background-color: rgb(2, 97, 121);
+  box-shadow: 15px 10px 15px black;
+
+}
+
+
+.my-name{
+  text-decoration: none;
+  margin-top: 2rem;
+  display:flex ;
+  width: 20rem;
+  height: auto;
+  font-family: 'Tentacles';
+  color:#F2D16B;
+  font-size: 2.5rem;
+  font-weight:300;
+  margin-left: 3rem;
+}
+
+.nav-links{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding-right: 2rem;
+  justify-content: flex-end;
+}
+
+
+.text-links:hover {
+  transform: scale(1.5);
+}
+
+
+.text-links{
+  align-items: center;
+  margin-right: 2.5rem;
+  height: 100%;
+  display: flex;
+  text-decoration: none;
+  transition: transform .2s;
+  color: #F2D16B;
+  font-size: 2rem;
+}
+
+
+
