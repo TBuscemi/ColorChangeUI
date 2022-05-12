@@ -18,6 +18,9 @@ export default function Home() {
   
   const[newTextColor, setNewTextColor]=useState()
 
+  const[changeClassName, setChangeClassName]=useState()
+
+
   
   useEffect(()=>{
       mountedRef.current=true
@@ -37,15 +40,26 @@ export default function Home() {
       if(mountedRef.current===true) setNewTextColor(color)
       return ()=> mountedRef.current=false
   },[color])
-
-
   
+
   return (
     <div>
-        <div className='nav-bar' style={{backgroundColor: newNavFootColor}}>
+        <div className={changeClassName} style={{backgroundColor: newNavFootColor}}>
           <NavBar/>    
         </div> 
-        <div style={{backgroundColor: newBodyColor}} >
+        <div style={{backgroundColor: newBodyColor}}>
+        <div>
+          <input type="radio" name="fav_language" value="light"
+            onClick={e=>setChangeClassName('lightmode')}
+          />
+          <label for="html">light</label><br></br>
+          <input type="radio" name="fav_language" value="dark"/>
+          <label for="html">dark</label><br></br>
+          <input type="radio" name="fav_language" value="custom"
+            onClick={e=>setChangeClassName('none')}
+          />
+          <label for="html">custom</label><br></br>
+        </div>
         	<input type="color" onChange={e=>setNewNavFootColor(e.target.value)}/> 
         	<input type="color" onChange={e=>setNewBodyColor(e.target.value)}/>
         	<input type="color" onChange={e=>setNewTextColor(e.target.value)}/>
@@ -53,7 +67,7 @@ export default function Home() {
         <div style={{backgroundColor: newBodyColor, color:newTextColor}}>
         	<Content/>
         </div> 
-        <div style={{backgroundColor: newNavFootColor, a:newTextColor}}>
+        <div style={{backgroundColor: newNavFootColor}} className={changeClassName} >
           	<Footer/>
         </div>
     </div>
