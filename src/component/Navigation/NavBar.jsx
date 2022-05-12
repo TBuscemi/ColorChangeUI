@@ -4,7 +4,10 @@ import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 
+
 export default function NavBar() {
+
+
     return (
     <div className='nav-wrapper'>
       <div className='nav-cont'>
